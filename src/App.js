@@ -84,6 +84,8 @@ const tache=(indice)=>{
       
 <div className=''>
 {finale===false ? 
+<div>
+<h1 className='font-bold text-3xl text-black'>Tic Tac Toe</h1>
   <table className='w-96 h-96'>
 
 
@@ -109,7 +111,7 @@ const tache=(indice)=>{
 </tbody>
 
 </table>
-
+</div>
 : null}
 
 
