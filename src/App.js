@@ -1,6 +1,7 @@
 
 import {   useEffect, useState } from 'react';
 import "./App.css"
+import {FcRefresh} from "@react-icons/all-files/fc/FcRefresh"
 function App() {
 
 
@@ -85,8 +86,17 @@ const tache=(indice)=>{
 <div className=''>
 {finale===false ? 
 <div>
-<h1 className='font-bold text-3xl text-black'>Tic Tac Toe</h1>
-  <table className='w-96 h-96'>
+  <div className='flex items-center justify-between'>
+<h1 className='font-bold text-5xl text-black '>Tic Tac Toe</h1>
+<button><FcRefresh onClick={()=>{
+
+setFinale(false)
+setTableau(["","","","","","","","",""])
+setX(true)
+
+}}/></button>
+</div>
+  <table className='w-96 h-96 mt-4'>
 
 
 <tbody>
@@ -119,16 +129,16 @@ const tache=(indice)=>{
 {(finale===true && x===false) || (finale===true && x===true) ? 
 finale===true && x===false ? 
 <div className='flex flex-col'>
-  <p>first player won</p> 
-  <button className='bg-blue-200 rounded-lg' onClick={()=>{
+  <p className='text-3xl font-bold '>first player won</p> 
+  <button className='bg-blue-200 rounded-lg mt-5 h-14' onClick={()=>{
 setFinale(false)
 setTableau(["","","","","","","","",""])
 setX(true)
   }}>play again</button>
 </div> : finale===true && x===true ? 
 <div className='flex flex-col'>
-  <p>second player won</p> 
-  <button className='bg-blue-200 rounded-lg' onClick={()=>{
+  <p className='text-3xl font-bold '>second player won</p> 
+  <button className='bg-blue-200 rounded-lg mt-5 h-14' onClick={()=>{
 setFinale(false)
 setTableau(["","","","","","","","",""])
 setX(true)
